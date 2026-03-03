@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "language": "en,zh-CN",
+  "words": [
+    "sharesdu",
+    "axios",
+    "vuetify",
+    "vuex",
+    "vite",
+    "eslint",
+    "commitlint",
+    "markdownlint",
+    "gpgsig",
+    "gpg",
+    "ssh",
+    "api",
+    "backend",
+    "frontend",
+    "middleware",
+    "celery",
+    "redis",
+    "elasticsearch",
+    "django",
+    "postgresql",
+    "nginx",
+    "docker",
+    "kubernetes",
+    "cicd",
+    "devops"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "*.min.js",
+    "package-lock.json",
+    "yarn.lock"
+  ]
+}

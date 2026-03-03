@@ -1,5 +1,10 @@
 # ShareSDU - 山东大学校园资源分享平台
 
+[![Web CI](https://github.com/W1412X/sharesdu/workflows/Web%20CI/badge.svg)](https://github.com/W1412X/sharesdu/actions/workflows/web-ci.yml)
+[![Android CI](https://github.com/W1412X/sharesdu/workflows/Android%20CI/badge.svg)](https://github.com/W1412X/sharesdu/actions/workflows/android-ci.yml)
+[![Documentation Check](https://github.com/W1412X/sharesdu/workflows/Documentation%20Check/badge.svg)](https://github.com/W1412X/sharesdu/actions/workflows/docs-check.yml)
+[![PR Check](https://github.com/W1412X/sharesdu/workflows/PR%20Check/badge.svg)](https://github.com/W1412X/sharesdu/actions/workflows/pr-check.yml)
+
 一个面向山东大学师生的资源分享与交流平台，支持文章发布、课程评价、帖子讨论等功能。
 
 ## 📱 多端支持

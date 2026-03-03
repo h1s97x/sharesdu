@@ -1,0 +1,38 @@
+# 自动标签配置
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.md', 'docs/**/*']
+
+web:
+  - changed-files:
+    - any-glob-to-any-file: 'web/**/*'
+
+android:
+  - changed-files:
+    - any-glob-to-any-file: 'android/**/*'
+
+harmony:
+  - changed-files:
+    - any-glob-to-any-file: 'harmony/**/*'
+
+backend:
+  - changed-files:
+    - any-glob-to-any-file: 'backend/**/*'
+
+ci/cd:
+  - changed-files:
+    - any-glob-to-any-file: ['.github/**/*', '*.yml', '*.yaml']
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: ['**/package.json', '**/package-lock.json', '**/build.gradle*', '**/pom.xml']
+
+bug:
+  - head-branch: ['^fix/', 'fix-']
+
+enhancement:
+  - head-branch: ['^feat/', 'feature-']
+
+refactor:
+  - head-branch: ['^refactor/']
