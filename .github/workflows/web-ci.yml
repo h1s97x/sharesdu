@@ -60,7 +60,7 @@ jobs:
         run: npm run test:unit
       
       - name: Upload coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         if: success()
         with:
           files: ./web/coverage/lcov.info
@@ -92,7 +92,7 @@ jobs:
         run: npm run build
       
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: web-dist
           path: web/dist
@@ -124,7 +124,7 @@ jobs:
         continue-on-error: true
       
       - name: Upload E2E screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: e2e-screenshots
