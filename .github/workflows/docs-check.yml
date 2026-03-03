@@ -28,7 +28,7 @@ jobs:
             **/*.md
             !node_modules
             !web/node_modules
-          config: .markdownlint.json
+          config: .github/config/.markdownlint.json
         continue-on-error: true
   
   link-check:
@@ -43,7 +43,7 @@ jobs:
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           use-quiet-mode: 'yes'
-          config-file: '.markdown-link-check.json'
+          config-file: '.github/config/.markdown-link-check.json'
         continue-on-error: true
   
   spell-check:
@@ -59,5 +59,5 @@ jobs:
         with:
           files: |
             **/*.md
-          config: .cspell.json
+          config: .github/config/.cspell.json
         continue-on-error: true

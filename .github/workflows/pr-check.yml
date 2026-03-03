@@ -19,7 +19,7 @@ jobs:
       - name: Check commit messages
         uses: wagoid/commitlint-github-action@v5
         with:
-          configFile: .commitlintrc.json
+          configFile: .github/config/.commitlintrc.json
         continue-on-error: true
       
       - name: Verify commit signatures

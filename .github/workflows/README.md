@@ -59,16 +59,18 @@
 
 ## 🔧 配置文件
 
-### `.markdownlint.json`
+所有配置文件都位于 `.github/config/` 目录下，保持项目根目录整洁。
+
+### `.github/config/.markdownlint.json`
 Markdown 格式检查配置，定义了允许的 Markdown 规则。
 
-### `.markdown-link-check.json`
+### `.github/config/.markdown-link-check.json`
 链接检查配置，定义了忽略的链接模式和重试策略。
 
-### `.commitlintrc.json`
+### `.github/config/.commitlintrc.json`
 提交信息格式检查配置，遵循 Conventional Commits 规范。
 
-### `.cspell.json`
+### `.github/config/.cspell.json`
 拼写检查配置，定义了项目特定的词汇表。
 
 ### `.github/labeler.yml`
@@ -147,9 +149,9 @@ cd android
 
 ### 文档检查失败
 
-- Markdown Lint: 修复格式问题或更新 `.markdownlint.json`
-- Link Check: 修复失效链接或添加到忽略列表
-- Spell Check: 修正拼写或添加到 `.cspell.json` 词汇表
+- Markdown Lint: 修复格式问题或更新 `.github/config/.markdownlint.json`
+- Link Check: 修复失效链接或添加到忽略列表 `.github/config/.markdown-link-check.json`
+- Spell Check: 修正拼写或添加到 `.github/config/.cspell.json` 词汇表
 
 ## 📚 相关资源
 
