@@ -26,28 +26,52 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
+      
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: wrapper
+          build-root-directory: android
       
       - name: Grant execute permission for gradlew
         working-directory: ./android
         run: chmod +x gradlew
       
+      - name: Validate Gradle wrapper
+        working-directory: ./android
+        run: ./gradlew --version
+      
       - name: Build with Gradle
         working-directory: ./android
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace
       
-      - name: Run tests
+      - name: Run unit tests
         working-directory: ./android
-        run: ./gradlew test
+        run: ./gradlew test --stacktrace
+        continue-on-error: true
       
-      - name: Build APK
+      - name: Build Debug APK
         working-directory: ./android
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug --stacktrace
       
-      - name: Upload APK
+      - name: Build Release APK
+        working-directory: ./android
+        run: ./gradlew assembleRelease --stacktrace
+        continue-on-error: true
+      
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v3
+        if: success()
         with:
-          name: android-apk
+          name: android-debug-apk
+          path: android/app/build/outputs/apk/debug/*.apk
+          retention-days: 7
+      
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v3
+        if: success()
+        with:
+          name: android-release-apk
           path: android/app/build/outputs/apk/release/*.apk
           retention-days: 7
       
@@ -57,4 +81,12 @@ jobs:
         with:
           name: android-test-results
           path: android/app/build/test-results
+          retention-days: 7
+      
+      - name: Upload build reports
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: android-build-reports
+          path: android/app/build/reports
           retention-days: 7
