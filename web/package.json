@@ -24,7 +24,7 @@
     "@wangeditor/plugin-formula": "^1.0.11",
     "ajv": "^8.20.0",
     "aos": "^2.3.4",
-    "axios": "^1.7.2",
+    "axios": "^1.18.0",
     "darkreader": "^4.9.118",
     "dexie": "^4.0.11",
     "html2canvas": "^1.4.1",
@@ -39,7 +39,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.29.6",
     "@babel/eslint-parser": "^7.12.16",
     "@babel/plugin-transform-private-methods": "^7.24.7",
     "@vue/test-utils": "^2.4.6",
